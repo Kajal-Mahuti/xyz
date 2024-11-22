@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+
+     <!-- navigation bar start -->
+     <nav>
+        <!-- responsive navigation bar with hamburger -->
+        <ul class="sidebar">
+            <li onclick="hideSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+            <li><a href="./locations.html">Locations</a></li>
+            <li><a href="./galleryreview.html">Reviews</a></li>
+            <li><a href="./contact.html">Contact us</a></li>
+            <li><a href="./login.html">Login/Signup</a></li>
+            <li><a href="./cart.html"></a></li>
+        </ul>
+        <!-- responsive navigation bar with hamburger -->
+
+        <ul>
+            <li><a href="./index.html">DreamWeds</a></li>
+            <!-- <li class="hideOnMobile"><a href="./ser">Services</a></li> -->
+            <li class="hideOnMobile"><a href="./locations.html">Locations</a></li>
+            <li class="hideOnMobile"><a href="./galleryreview.html">Reviews</a></li>
+            <li class="hideOnMobile"><a href="./contact.html">Contact us</a></li>
+            <li class="hideOnMobile"><a href="./login.html">Login/Signup</a></li>
+            <li><a href="./cart.html"></a></li>
+            <li class= "menu-button"onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+        </ul>
+    </nav>
+    <!-- navigation bar ends  -->
+    
+<div class="container">
+    <div class="checkoutLayout">
+
+        
+        <div class="returnCart">
+            <a href="./cart.html">keep shopping</a>
+            <h1>List Product in Cart</h1>
+            <div class="list">
+
+                <div class="item">
+                    <img src="./images/bridal makeup 1.jpeg">
+                    <div class="info">
+                        <div class="name">Mehendi Services</div>
+                        <div class="price">50000/1 product</div>
+                    </div>
+                    <div class="quantity">5</div>
+                    <div class="ReturnPrice">50000</div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="right">
+            <h1>Checkout</h1>
+            <div class="form">
+            <form action="http://localhost:3000/checkout" method="POST">
+                <div class="group">
+                    <label for="name">Full Name</label>
+                    <input type="text" name="fullname" id="fullname">
+                </div>
+    
+                <div class="group">
+                    <label for="phone">Phone Number</label>
+                    <input type="number" name="phone" id="phone">
+                </div>
+    
+                <div class="group">
+                    <label for="address">Address</label>
+                    <input type="text" name="address" id="address">
+                </div>
+    
+                <div class="group">
+                    <label for="area">Area</label>
+                    <input type="text" name="area" id="area">
+                </div>
+    
+                <div class="group">
+                    <label for="pincode">pincode</label>
+                    <input type="text" name="pincode" id="pincode">
+                </div>
+            </div>
+            <div class="return">
+                <div class="row">
+                    <div>Total Quantity</div>
+                    <div class="totalQuantity">70</div>
+                </div>
+                <div class="row">
+                    <div>Total Price</div>
+                    <div class="totalPrice">900</div>
+                </div>
+            </div>
+            <button class="buttonCheckout">CHECKOUT</button>
+        </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+<script src="checkout.js"></script>
+
+</body>
+</html>

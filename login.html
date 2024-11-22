@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+   <html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <!--=============== REMIXICONS ===============-->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css" crossorigin="">
+
+      <!--=============== CSS ===============-->
+      <link rel="stylesheet" href="./login.css">
+      <script src="./main.js"></script>
+
+      <title>Login form</title>
+   </head>
+   <body>
+          <!-- navigation bar start -->
+    <nav>
+      <!-- responsive navigation bar with hamburger -->
+      <ul class="sidebar">
+          <li onclick = hideSidebar()><svg xmlns="http://www.w3.org/2000/svg" 
+              height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368">
+              <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/>
+          </svg></li>
+          <li><a href="./cart.html">Services</a></li>
+          <li><a href="./locations.html">Locations</a></li>
+          <li><a href="./galleryreview.html">Reviews</a></li>
+          <li><a href="./contact.html">Contact us</a></li>
+          <!-- <li><a href="#">Login/Signup</a></li> -->
+      </ul>
+      <!-- responsive navigation bar with hamburger -->
+
+      <ul>
+          <li><a href="./index.html">DreamWeds</a></li>
+          <li class="hideOnMobile"><a href="./cart.html">Services</a></li>
+          <li class="hideOnMobile"><a href="./locations.html">Locations</a></li>
+          <li class="hideOnMobile"><a href="./galleryreview.html">Reviews</a></li>
+          <li class="hideOnMobile"><a href="./contact.html">Contact us</a></li>
+          <!-- <li class="hideOnMobile"><a href="./login.html">Login/Signup</a></li> -->
+          <li class= "menu-button" onclick = showSidebar()><svg xmlns="http://www.w3.org/2000/svg"
+               height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368">
+              <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/>
+          </svg></li>
+      </ul>
+  </nav>
+  <!-- navigation bar ends  -->
+      <div class="login">
+         <img src="./images/homebgmain.jpg" alt="image" class="login__bg">
+
+         <form action="http://localhost:3000/login" method="POST" class="login__form">
+            <h1 class="login__title">Login</h1>
+
+            <div class="login__inputs">
+               <div class="login__box">
+                  <input type="email" name="email" placeholder="Email ID" required class="login__input">
+                  <i class="ri-mail-fill"></i>
+               </div>
+
+               <div class="login__box">
+                  <input type="password" name="password" placeholder="Password" required class="login__input">
+                  <i class="ri-lock-2-fill"></i>
+               </div>
+            </div>
+
+            <div class="login__check">
+               <div class="login__check-box">
+                  <input type="checkbox" class="login__check-input" id="user-check">
+                  <label for="user-check" class="login__check-label">Remember me</label>
+               </div>
+
+               <a href="#" class="login__forgot">Forgot Password?</a>
+            </div>
+
+            <button type="submit" class="login__button">Login</button>
+
+            <div class="login__register">
+               Don't have an account? <a href="./registration.html">Register</a>
+            </div>
+         </form>
+      </div>
+
+<!-- This will show alerts -->
+<div id="alertMessage" style="color:red;"></div>
+
+<script>
+    document.getElementById('loginForm').addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        const formData = new FormData(this);
+        const data = Object.fromEntries(formData.entries());
+
+        fetch('/login', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data)
+        })
+        .then(response => response.json())
+        .then(result => {
+            const alertMessage = document.getElementById('alertMessage');
+            if (result.success) {
+                alertMessage.style.color = 'green';
+                alertMessage.innerHTML = result.message;
+            } else {
+                alertMessage.style.color = 'red';
+                alertMessage.innerHTML = result.message;
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            document.getElementById('alertMessage').innerHTML = 'An error occurred.';
+        });
+    });
+</script>
+
+   </body>
+</html>

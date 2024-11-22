@@ -1,0 +1,360 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    position:relative;
+    background-repeat: no-repeat;
+    background-position: 45%;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.header{
+    min-height: 100vh;
+    width:100%;
+    background-image: url(./images/homebgmain.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+/* navbar style */
+nav{
+    background-color: rgba(255, 255, 255, 0.823);
+    box-shadow: 3px 3px 5px rgba(0,0,0,0.1);
+    padding: 12px;
+    backdrop-filter: blur(10px);
+}
+nav ul{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav li{
+    height:50px;
+    font-size: 20px;
+}
+nav a{
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color:black;
+}
+nav a:hover{
+    background-color: #f0f0f0;
+}
+nav li:first-child{
+    margin-right: auto;
+}
+/* navbar end */
+
+
+/* hamburger icon menu  */
+.sidebar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: rgba(255, 255, 255, 0.596);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0,0,0,0.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.sidebar li{
+    width: 100%;
+}
+.sidebar a{
+    width: 100%;
+}
+.menu-button{
+    display: none;
+}
+/* hamburger icon code end */
+
+.bgtext{
+    position: absolute;
+    top: 12%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: rgba(255, 255, 255, 0.866);
+    font-size: 30px;
+    font-family: parsienne;
+}
+
+.welcome{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 75px;
+    text-align: center;
+    color: rgb(6, 57, 6);
+}
+.welcome h1{
+    font-family: lobster;
+    font-size: 75px;
+}
+.welcome h2{
+    font-size:55px;
+    font-family: lobster;
+    color:rgb(186, 83, 98);
+}
+.welcome p{
+    font-size:25px;
+    font-style: bold;
+    margin-top: 22px;
+    font-family: parsienne;
+}
+
+/* services section starts  */
+
+.services h2{
+    font-style: bold;
+    font-size: 45px;
+    margin-top: 60px;
+    text-align: center;
+    font-family: lobster;
+    color:rgb(186, 83, 98);
+} 
+.services p{
+    font-size: 26px;
+    text-align: center;
+    font-family: parsienne;
+    margin-top: 30px;
+    color: rgb(6, 57, 6);
+    font-style: bold;
+}
+
+section .cate {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+  
+    /* text-align: center; */
+  }
+  
+  section .cate .top {
+    color: rgba(38, 9, 255, 0.695);
+  }
+  
+  section .category {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 2fr;
+    overflow: hidden;
+    margin-top: 4rem;
+    gap: px;
+    text-align: center;
+    cursor: pointer;
+    /* border: 2px solid; */
+  }
+  
+  section .category .imgcategory .names {
+    /* margin-top: 30px; */
+    transition: all 0.1 ease;
+    cursor: pointer;
+    font-size: 1.5rem;
+    margin-top: 28px;
+  }
+  
+  .cn {
+    text-decoration: none;
+  }
+  
+  section .category .imgcategory .names:hover {
+    color: rgba(0, 0, 0, 0.871);
+  }
+  
+  section .category .imgcategory img {
+    object-fit: cover;
+    /* width: 16rem; */
+    height: 14rem;
+    border-radius: 20px;
+    transition: all 0.3s ease-out;
+  }
+  
+  section .category .imgcategory {
+    padding: 10px;
+    /* overflow: hidden; */
+  }
+  
+  section .category .imgcategory img:hover {
+    transform: scale(1.09);
+  }
+  
+  section .cate {
+    font-size: 34px;
+  }
+  
+  section .cate p {
+    display: inline;
+  }
+  
+/* services sections styling ends */
+
+/* Why choose us/icons section starts  */
+
+.Why h1{
+    text-align: center;
+    font-style: bold;
+    color: rgb(181, 54, 75);
+    padding-top: 45px;
+    font-size: 45px;
+    font-family: lobster;
+}
+
+.Why p{
+    text-align: center;
+    align-items: center;
+    font-size: 30px;
+    color:rgb(6, 57, 6);
+    padding-top: 25px;
+    font-family: parsienne;
+} 
+
+.deliveryorder {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .deliveryorder .imgcontainer img {
+    margin-left: 50px;
+    width: 65px;
+    height: 62px;
+    padding-top: 39px;
+  }
+  
+  /* icons section ends */
+
+/* footer starts */
+footer {
+    position: relative;
+  }
+  
+  footer img {
+    height: 470px;
+  }
+  
+  footer .leftfooterpart {
+    position: absolute;
+    top: 220px;
+    left: 40px;
+  }
+  
+  footer .leftfooterpart a {
+    color:rgb(181, 54, 75);
+    font-size: 45px;
+    text-decoration: none;
+  }
+  
+  footer .leftfooterpart p {
+    color: rgb(6, 57, 6);
+    font-size: 20px;
+  }
+  
+  .leftfooterpart .kajal {
+    font-size: 20px;
+    color: rgb(181, 54, 75);
+  }
+  
+  footer .rightfooter {
+    position: absolute;
+    color: rgb(6, 57, 6);
+    top: 220px;
+    left: 500px;
+  }
+  
+  footer .rightfooter ul li {
+    list-style-type: none;
+    font-size: 20px;
+  }
+  
+  footer .rightfooter ul li a {
+    color: rgb(181, 54, 75);
+    list-style: none;
+    text-decoration: none;
+  }
+
+  /* ------------------------------------------- */
+
+  footer .foreright {
+    position: absolute;
+    color: rgb(6, 57, 6);
+    left: 850px;
+    top: 220px;
+  }
+  
+  footer .foreright ul li {
+    list-style-type: none;
+    font-size: 20px;
+  }
+  
+  footer .foreright ul li a {
+    color: rgb(181, 54, 75);
+    list-style: none;
+    text-decoration: none;
+  }
+
+/* ------------------------------------------ */
+
+  footer .foremostright {
+    position: absolute;
+    color: rgb(6, 57, 6);
+    left: 1200px;
+    top: 220px;
+  }
+  
+  footer .foremostright ul li {
+    list-style-type: none;
+    font-size: 20px;
+  }
+  
+  footer .foremostright ul li a {
+    color: rgb(181, 54, 75);
+    list-style: none;
+    text-decoration: none;
+  }
+
+/* footer code ends  */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* media queries (responsive) */
+@media(max-width: 860px){
+    .hideOnMobile{
+        display: none;
+    }
+.menu-button{
+    display: block;
+}
+}
+@media(max-width: 400px){
+    .sidebar{
+        width: 100%;
+    }
+}

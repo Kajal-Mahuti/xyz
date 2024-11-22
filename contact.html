@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get in touch</title>
+    <link rel="stylesheet" href="./contact.css">
+</head>
+<body>
+    <nav>
+        <!-- responsive navigation bar with hamburger -->
+        <ul class="sidebar">
+            <li onclick="hideSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+            <li><a href="./services.html">Services</a></li>
+            <li><a href="./locations.html">Locations</a></li>
+            <li><a href="./galleryreview.html">Reviews</a></li>
+            <!-- <li><a href="contact.html">Contact us</a></li> -->
+            <li><a href="./login.html">Login/Signup</a></li>
+        </ul>
+        <!-- responsive navigation bar with hamburger -->
+
+        <ul>
+            <li><a href="./index.html">DreamWeds</a></li>
+            <li class="hideOnMobile"><a href="./services.html">Services</a></li>
+            <li class="hideOnMobile"><a href="./locations.html">Locations</a></li>
+            <li class="hideOnMobile"><a href="./galleryreview.html">Reviews</a></li>
+            <!-- <li class="hideOnMobile"><a href="contact.html">Contact us</a></li> -->
+            <li class="hideOnMobile"><a href="./login.html">Login/Signup</a></li>
+            <li class= "menu-button"onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+        </ul>
+    </nav>
+    <!-- navigation bar ends  -->
+
+    
+    <!-- Contact Us Form code -->
+     <section>
+    <div class="contact-container">
+        <form action="http://localhost:3000/contact" method="POST" class="contact-left">
+            <div class="contact-left-title">
+                <h2>Get in touch</h2>
+                <hr>
+            </div>
+            <input type="text" name="custname" placeholder="Your name" class="contact-inputs" required>
+            <input type="email" name="email" placeholder="Your email" class="contact-inputs" required>
+            <input type="text" name="Concern" placeholder="Concern" class="contact-inputs" required>
+            <textarea name="message" placeholder="your message" class="contact-inputs" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</section>
+
+    <script src="./main.js"></script>
+</body>
+</html>

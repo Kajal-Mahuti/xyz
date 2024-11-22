@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+
+     <!-- navigation bar start -->
+     <nav>
+        <!-- responsive navigation bar with hamburger -->
+        <ul class="sidebar">
+            <li onclick="hideSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+            <li><a href="./locations.html">Locations</a></li>
+            <li><a href="./galleryreview.html">Reviews</a></li>
+            <li><a href="./contact.html">Contact us</a></li>
+            <li><a href="./login.html">Login/Signup</a></li>
+            <li><a href="./cart.html"></a></li>
+        </ul>
+        <!-- responsive navigation bar with hamburger -->
+
+        <ul>
+            <li><a href="./index.html">DreamWeds</a></li>
+            <!-- <li class="hideOnMobile"><a href="./ser">Services</a></li> -->
+            <li class="hideOnMobile"><a href="./locations.html">Locations</a></li>
+            <li class="hideOnMobile"><a href="./galleryreview.html">Reviews</a></li>
+            <li class="hideOnMobile"><a href="./contact.html">Contact us</a></li>
+            <li class="hideOnMobile"><a href="./login.html">Login/Signup</a></li>
+            <li><a href="./cart.html"></a></li>
+            <li class= "menu-button"onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+        </ul>
+    </nav>
+    <!-- navigation bar ends  -->
+
+    <div class="container">
+        <header>
+            <h1>OUR SERVICES</h1>
+            <div class="iconCart">
+                <img src="./images/shopping-cart.png">
+                <div class="totalQuantity">0</div>
+            </div>
+        </header>
+
+        <div class="listProduct">
+
+            <div class="item">
+                <img src="./images/bridal makeup 1.jpeg" alt="">
+                <h2>Makeup services</h2>
+                <div class="price">50,000</div>
+                <button>Add To Cart</button>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="cart">
+        <h2>
+            CART
+        </h2>
+
+        <div class="listCart">
+
+
+            <div class="item">
+                <img src="./images/bridal makeup 1.jpeg">
+                <div class="content">
+                    <div class="name">Makeup services</div>
+                    <div class="price">50,000 / 1 product</div>
+                </div>
+                <div class="quantity">
+                    <button>-</button>
+                    <span class="value">3</span>
+                    <button>+</button>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="buttons">
+            <div class="close">
+                CLOSE
+            </div>
+            <div class="checkout">
+                <a href="checkout.html">CHECKOUT</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <section class="footer">
+            <img src="./images/footerbackground.png">
+            <div class="leftfooterpart">
+                <h2><a href="#">DreamWeds</a></h2>
+                <br>
+                <p>If you have any question, <br> please contact us at
+                <p class="kajal">Dreamweds@gmail.com</p>
+            </div>
+    
+            <div class="rightfooter">
+                <h1>Customer</h1>
+                <br>
+                <ul>
+                    <li><a href="./login.html">Account</a></li> <br>
+                    <li><a href="./index.html">About us</a></li> <br>
+                    <li><a href="./galleryreview.html">Reviews</a></li> <br>
+                    <li><a href="locations.html">Locations</a></li> <br>
+                    <!-- <li><a href="#">Support</a></li> -->
+                </ul>
+                </div>
+    <br>
+                <div class="foreright">
+                    <h1>Tools</h1>
+                    <br>
+                    <ul>
+                        <li><a href="./index.html">Online store</a></li> <br>
+                        <li><a href="./index.html">Privacy Policy</a></li> <br>
+                        <li><a href="./index.html">Refund policy</a></li> <br>
+                        <li><a href="./index.html">Track Order</a></li> <br>
+                    </ul>
+                </div>
+                <br>
+                <div class="foremostright">
+                    <h1>Tools</h1>
+                    <br>
+                    <ul>
+                        <li><a href="./cart.html">Online store</a></li> <br>
+                        <li><a href="./locations.html">Locations</a></li> <br>
+                        <li><a href="./galleryreview.html">Reviews</a></li> <br>
+                        <li><a href="./contact.html">Contact Us</a></li> <br>
+                    </ul>
+                </div>
+        </section>
+    </footer>
+
+
+    <script src="app.js"></script>
+    
+</body>
+</html>

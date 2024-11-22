@@ -1,0 +1,39 @@
+[
+    {
+        "id": 1,
+        "name": "Makeup services",
+        "price": 50000,
+        "image": "./images/bridal makeup 1.jpeg"
+    },
+    {
+        "id": 2,
+        "name": "Mehendi services",
+        "price": 25000,
+        "image": "./images/mehendi cat7.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Catering services",
+        "price": 250000,
+        "image": "./images/catering 1.jpg"
+    }
+    ,
+    {
+        "id": 4,
+        "name": "Catering services",
+        "price": 200000,
+        "image": "./images/catering 3.jpg"
+    },
+    {
+        "id": 5,
+        "name": "Decorator services",
+        "price": 120000,
+        "image": "./images/decorator category2.jpg"
+    },
+    {
+        "id": 6,
+        "name": "Mehendi Services",
+        "price": 35000,
+        "image": "./images/mehendi cat7.jpg"
+    }
+]
